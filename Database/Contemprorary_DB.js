@@ -1,4 +1,4 @@
-const mogoose =require('mongoose')
+const mongoose =require('mongoose')
 const data=require('../Data/Contemporary_Paintings')
 const {Contemporary_image_Table}=require('./mongoose')
 

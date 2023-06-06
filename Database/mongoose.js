@@ -25,4 +25,13 @@ const Mixed_Art=mongoose.model('Mixed_Art',{
         name:String
   })
 
-module.exports={Contemporary_image_Table,Sculpture_image_table,Mixed_Art}
+const SignUp_User=mongoose.model('User',{
+  firstName:String,
+  lastName:String,
+  email:String,
+  password:String,
+  Phone:Number
+})
+
+
+module.exports={Contemporary_image_Table,Sculpture_image_table,Mixed_Art,SignUp_User}
