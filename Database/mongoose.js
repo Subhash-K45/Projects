@@ -7,14 +7,20 @@ const Contemporary_image_Table = mongoose.model('Contemporary_Paintings', {
   id: Number,
   img: String,
   category: String,
-  price: Number
+  price: Number,
+  name:String,
+  artist:String,
+  description:String
 });
 
 const Sculpture_image_table=mongoose.model('Sculptures',{
   id:Number,
   img:String,
   category:String,
-  price:Number
+  price:Number,
+  name:String,
+  createrName:String,
+  description:String
 })
 
 const Mixed_Art=mongoose.model('Mixed_Art',{
@@ -22,7 +28,10 @@ const Mixed_Art=mongoose.model('Mixed_Art',{
         img:String,
         category:String,
         price:Number,
-        name:String
+        name:String,
+        name:String,
+        artist:String,
+        description:String
   })
 
 const SignUp_User=mongoose.model('User',{

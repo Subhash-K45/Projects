@@ -3,13 +3,16 @@ const data=require('../Data/Sculptures')
 const {Sculpture_image_table}=require('./mongoose')
 
 const saveData=async function(){
-    for(let{id,img,category,price}of data){
+    for(let{id,img,category,price,name,createrName,description}of data){
         try{
             const Sculpture= new Sculpture_image_table({
                 id,
                 img,
                 category,
-                price
+                price,
+                name,
+                createrName,
+                description
             })
             await Sculpture.save()
             console.log(`Saved ${id}`)
