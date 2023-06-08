@@ -42,5 +42,14 @@ const SignUp_User=mongoose.model('User',{
   Phone:Number
 })
 
+const SignUp_Creater=mongoose.model('Creater',{
+  firstName:String,
+  lastName:String,
+  email:String,
+  password:String,
+  phone:String,
+  Years_Of_Experience:String,
+  Work_Place:String
+})
 
-module.exports={Contemporary_image_Table,Sculpture_image_table,Mixed_Art,SignUp_User}
+module.exports={Contemporary_image_Table,Sculpture_image_table,Mixed_Art,SignUp_User,SignUp_Creater}

@@ -1,7 +1,11 @@
 const express=require('express')
-const {Contemporary_image_Table,Sculpture_image_table,Mixed_Art, SignUp_User} = require("../Database/mongoose");
+const bcrypt=require('bcrypt')
+const {Contemporary_image_Table,Sculpture_image_table,Mixed_Art, SignUp_User,SignUp_Creater} = require("../Database/mongoose");
+const Hashed_Password=require('../bcrypt')
 
-const {saveData}=require('../Database/Authentication/SignUp')
+const {saveData}=require('../Database/Authentication/SignUp');
+const save_creater_Data=require('../Database/Authentication/Creater_SignUp')
+const { hashSync } = require('bcrypt');
 const router=express.Router()
 
 
@@ -93,10 +97,13 @@ router.get('/Artist',async function(req,res){
   }
 })
 
-router.post('/SignUp',async function(req,res){
+router.post('/User_SignUp',async function(req,res){
   try{
-    const {firstName,lastName,email,password,Phone}=req.body
+    const {firstName,lastName,email,Password,Phone}=req.body
     const check=await SignUp_User.findOne({email:email})
+    const Hashed_User_Password=await Hashed_Password(Password)
+    const password=await Hashed_User_Password
+    console.log(typeof password)
     if(check){
       res.send('userFound')
      }
@@ -110,12 +117,13 @@ router.post('/SignUp',async function(req,res){
   }
 })
 
-router.post('/login',async function(req,res){
+router.post('/User_login',async function(req,res){
   try{
     const {email,password}=req.body
-    const check = await SignUp_User.findOne({email:email})
-    if(check){
-      if(check.password===password){
+    const User = await SignUp_User.findOne({email:email})
+    if(User){
+      const Check_Password=bcrypt.compare(password,User.password)
+      if(Check_Password){
         res.send('Login Sucessful')
       }
       else{
@@ -130,7 +138,43 @@ router.post('/login',async function(req,res){
   }
 })
 
+router.post('/Creater_SignUp',async(req,res)=>{
+  try{
+  const {firstName,lastName,email,Password,phone,ArtWork,Work_Place}=req.body
+  const check=await SignUp_Creater.findOne({email:email})
+  const Hashed_creater_Password=await Hashed_Password(Password)
+  const password=Hashed_creater_Password
 
+  if(check){
+    res.send(`User Found`)
+  }
+  else{
+    save_creater_Data({firstName,lastName,email,password,phone,ArtWork,Work_Place})
+    res.send(`Saved Successfully`)
+  }
+  }
+  catch(err){
+    console.log(err)
+  }
+  
+})
 
+router.post('/Creater_Login',async(req,res)=>{
+  try{
+     const {email,password}=req.body
+     const Creater=await SignUp_Creater.findOne({email:email})
+     if(Creater){
+      const Creater_Password=bcrypt.compare(password,Creater.password)
+      if(Creater_Password){
+        res.send(`Login Successfully`)
+      }
+      else{
+        res.send(`Unauthorized`)
+      }
+     }
 
+  }catch(err){
+    console.log(err)
+  }
+})
 module.exports=router
