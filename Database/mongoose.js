@@ -52,4 +52,11 @@ const SignUp_Creater=mongoose.model('Creater',{
   Work_Place:String
 })
 
-module.exports={Contemporary_image_Table,Sculpture_image_table,Mixed_Art,SignUp_User,SignUp_Creater}
+const Event_Update=mongoose.model("Events",{
+  Event_Title:String,
+  Event_Timings:String,
+  Event_Location:String,
+  Event_Descrption:String
+})
+
+module.exports={Contemporary_image_Table,Sculpture_image_table,Mixed_Art,SignUp_User,SignUp_Creater,Event_Update}
