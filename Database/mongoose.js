@@ -56,7 +56,22 @@ const Event_Update=mongoose.model("Events",{
   Event_Title:String,
   Event_Timings:String,
   Event_Location:String,
-  Event_Descrption:String
+  Event_Description:String
 })
 
-module.exports={Contemporary_image_Table,Sculpture_image_table,Mixed_Art,SignUp_User,SignUp_Creater,Event_Update}
+const Upcoming_Exibition=mongoose.model("Exibition",{
+  Event_Title:String,
+  Event_Timings:String,
+  Event_Location:String,
+  Event_Description:String
+})
+
+module.exports={
+  Contemporary_image_Table,
+  Sculpture_image_table,
+  Mixed_Art,
+  SignUp_User,
+  SignUp_Creater,
+  Event_Update,
+  Upcoming_Exibition
+}

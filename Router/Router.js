@@ -13,7 +13,7 @@ const Hashed_Password = require("../bcrypt");
 const { saveData } = require("../Database/Authentication/SignUp");
 const save_creater_Data = require("../Database/Authentication/Creater_SignUp");
 const Save_Event=require('../Database/EventUpdate')
-const { hashSync } = require("bcrypt");
+const Upcoming_Exibition_Data=require('../Database/Upcoming_Exibition')
 const router = express.Router();
 
 router.get("/", async function (req, res) {
@@ -195,8 +195,8 @@ router.post("/Creater_Login", async (req, res) => {
 
 router.post('/Creater/Event',async(req,res)=>{
     try{
-      const {Event_Title,Event_Timings,Event_Location,Event_Descrption}=req.body
-      await Save_Event({Event_Title,Event_Timings,Event_Location,Event_Descrption})
+      const {Event_Title,Event_Timings,Event_Location,Event_Description}=req.body
+      await Save_Event({Event_Title,Event_Timings,Event_Location,Event_Description})
       res.send(`Saved suceesfully`)
     }catch(err){
       console.log(err)
@@ -204,5 +204,14 @@ router.post('/Creater/Event',async(req,res)=>{
     }
 })
 
+router.post('/Upcoming_Exibition',async(req,res)=>{
+  try{
+    const {Event_Title,Event_Timings,Event_Location,Event_Description}=req.body
+    await Upcoming_Exibition_Data({Event_Title,Event_Timings,Event_Location,Event_Description})
+    res.send(`Saved Successfully`)
+  }catch(err){
+    console.log(err)
+  }
+})
 
 module.exports = router;
