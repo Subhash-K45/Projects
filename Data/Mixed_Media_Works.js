@@ -121,7 +121,7 @@ const data = [
   },
   {
     id: 13,
-    img: "https://i.pinimg.com/originals/f3/78/56/f37856e5d537c2a14c75cb28528e1d5b.jpg",
+    img: "https://th.bing.com/th/id/OIP.s4Hn5DsB_IYWLy31Gcyq1wHaFT?pid=ImgDet&rs=1",
     category: "Mixed Media Works",
     price: 55,
     name: "Nature-inspired Sculpture",
@@ -131,7 +131,7 @@ const data = [
   },
   {
     id: 14,
-    img: "https://i.pinimg.com/originals/8d/19/cb/8d19cbe7c5373b6477aae8f5e8c18e0b.jpg",
+    img: "https://4.bp.blogspot.com/-daGkfViPPCY/UufsR3o5xeI/AAAAAAAAB1w/eY0UBqrc6Kg/s1600/Mixed+Media+Moday+-+Art+Journal+Cover.JPG",
     category: "Mixed Media Works",
     price: 36,
     name: "Collage Portrait",
@@ -141,7 +141,7 @@ const data = [
   },
   {
     id: 15,
-    img: "https://i.pinimg.com/originals/ff/2e/5d/ff2e5d8b6ef2a1d9ae61ed2f4c6bb46d.jpg",
+    img: "https://i.pinimg.com/736x/57/76/2a/57762a6712fbc765c442c71c9609949e--mixed-media-artwork-mixed-media-portraits.jpg",
     category: "Mixed Media Works",
     price: 43,
     name: "Textured Abstract Art",
@@ -151,7 +151,7 @@ const data = [
   },
   {
     id: 16,
-    img: "https://i.pinimg.com/originals/a5/59/2a/a5592a95117c63448e62559f8f2c5a1b.jpg",
+    img: "https://th.bing.com/th/id/OIP.qwq_uD1o4hKtfGYx0E2pnwHaKf?pid=ImgDet&rs=1",
     category: "Mixed Media Works",
     price: 28,
     name: "Vintage Collage",
@@ -161,7 +161,7 @@ const data = [
   },
   {
     id: 17,
-    img: "https://i.pinimg.com/originals/c1/f9/9f/c1f99f37f8623c2eab2c4cde7580573e.jpg",
+    img: "https://i.pinimg.com/736x/93/12/96/93129657771721d5d75505cdfa34e5ec--blues.jpg",
     category: "Mixed Media Works",
     price: 61,
     name: "Urban Landscape Painting",
@@ -171,7 +171,7 @@ const data = [
   },
   {
     id: 18,
-    img: "https://i.pinimg.com/originals/66/8d/61/668d619f3ff8e523dc1ae269246d7314.jpg",
+    img: "https://i.pinimg.com/originals/cb/a5/56/cba55686c7b39239b09fe25dba4627b1.jpg",
     category: "Mixed Media Works",
     price: 37,
     name: "Assemblage Art",
@@ -181,7 +181,7 @@ const data = [
   },
   {
     id: 19,
-    img: "https://i.pinimg.com/originals/60/3f/59/603f594c494b4bfe943cdce6b7a38d0a.jpg",
+    img:"https://i.pinimg.com/originals/97/aa/3a/97aa3acf36dc891e904f8d67d0166231.jpg",
     category: "Mixed Media Works",
     price: 48,
     name: "Abstract Sculpture",
@@ -191,7 +191,7 @@ const data = [
   },
   {
     id: 20,
-    img: "https://i.pinimg.com/originals/40/1d/52/401d527d8a8df909de3fd6a3318a51ff.jpg",
+    img:"https://i.pinimg.com/originals/45/1f/67/451f67d06fbceb511f5087fd0a726658.jpg",
     category: "Mixed Media Works",
     price: 31,
     name: "Experimental Art",
@@ -201,7 +201,7 @@ const data = [
   },
   {
     id: 21,
-    img: "https://i.pinimg.com/originals/6f/42/76/6f4276f50e75d37c43c10797cbfaa5f1.jpg",
+    img:"https://i.pinimg.com/originals/cc/f7/12/ccf712d669965f41ffd7e6a6bfeefc19.jpg",
     category: "Mixed Media Works",
     price: 53,
     name: "Abstract Expressionism",
@@ -211,7 +211,7 @@ const data = [
   },
   {
     id: 22,
-    img: "https://i.pinimg.com/originals/9d/22/5e/9d225e0fe0c76dd0633eefaa558d93d9.jpg",
+    img:"https://i.pinimg.com/originals/5c/3a/cd/5c3acd4f152f91a9c763935ee482f7e9.jpg",
     category: "Mixed Media Works",
     price: 39,
     name: "Surreal Collage",
@@ -221,7 +221,7 @@ const data = [
   },
   {
     id: 23,
-    img: "https://i.pinimg.com/originals/40/46/f5/4046f5b3fe5b6727c6c9b13667b6f208.jpg",
+    img: "https://i.pinimg.com/originals/73/bb/07/73bb079e3891ff8f929d6592a0d0eba4.jpg",
     category: "Mixed Media Works",
     price: 49,
     name: "Abstract Nature",
@@ -231,7 +231,7 @@ const data = [
   },
   {
     id: 24,
-    img: "https://i.pinimg.com/originals/c5/8d/89/c58d892999ef8a229e659a7ad5ab3d08.jpg",
+    img:"https://th.bing.com/th/id/OIP.RGh-zafPtXd500LQ9rzRKgAAAA?pid=ImgDet&w=384&h=384&rs=1",
     category: "Mixed Media Works",
     price: 32,
     name: "Digital Collage",
@@ -241,7 +241,7 @@ const data = [
   },
   {
     id: 25,
-    img: "https://i.pinimg.com/originals/50/df/9e/50df9e85ea8c9cb2e5d2181b22fe8d1a.jpg",
+    img: "https://images.template.net/wp-content/uploads/2016/12/07102208/Collage-Art-with-Famous-Persons.jpg",
     category: "Mixed Media Works",
     price: 56,
     name: "Abstract Figurative Art",
