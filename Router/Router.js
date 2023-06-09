@@ -77,10 +77,13 @@ router.get("/Mixed_Image/:id", async function (req, res) {
 
 router.get("/Artist", async function (req, res) {
   try {
+    const obj = [];
     const res1 = await Contemporary_image_Table.find({});
-    const obj = res1.map(({ artist, category }) => {
-      return { artist, category };
-    });
+    obj.push(
+      res1.map(({ artist, category }) => {
+        return { artist, category };
+      })
+    );
 
     const res2 = await Mixed_Art.find({});
     obj.push(
@@ -147,7 +150,7 @@ router.post("/Creater_SignUp", async (req, res) => {
     const password = Hashed_creater_Password;
 
     if (check) {
-      res.send(`User Found`);
+      res.send("User Found");
     } else {
       save_creater_Data({
         firstName,
