@@ -1,13 +1,12 @@
-const express=require('express')
-const bodyParser=require('body-parser')
-const app=express()
-const router=require('./Router/Router')
-const PORT=8080
+const express = require("express");
+const bodyParser = require("body-parser");
+const app = express();
+const router = require("./Router/Router");
+const PORT = 8080;
 
-app.use(bodyParser.json())
-app.use(router)
+app.use(bodyParser.json());
+app.use(router);
 
-
-app.listen(PORT,()=>{
-    console.log(`App is listening to ${PORT}`)
+app.listen(PORT, () => {
+  console.log(`App is listening to ${PORT}`);
 });

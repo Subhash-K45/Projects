@@ -6,28 +6,26 @@ const {
   Mixed_Art,
   SignUp_User,
   SignUp_Creater,
-  Event_Update
+  Event_Update,
 } = require("../Database/mongoose");
 const Hashed_Password = require("../bcrypt");
 
 const { saveData } = require("../Database/Authentication/SignUp");
 const save_creater_Data = require("../Database/Authentication/Creater_SignUp");
-const Save_Event=require('../Database/EventUpdate')
-const Upcoming_Exibition_Data=require('../Database/Upcoming_Exibition')
+const Save_Event = require("../Database/EventUpdate");
+const Upcoming_Exibition_Data = require("../Database/Upcoming_Exibition");
 const router = express.Router();
 
 router.get("/", async function (req, res) {
-  console.log("Router Working");
-  res.send("Hello");
+  res.send(["Contemporary Paintings", "Sculptures", "Mixed Image"]);
 });
 
 router.get("/Contemporary_Paintings", async function (req, res) {
   try {
     const result = await Contemporary_image_Table.find();
     res.send(result);
-    console.log(result);
-  } catch (err) {
-    console.log(res.status(statusbar).send(err));
+  } catch (error) {
+    console.log(error);
   }
 });
 
@@ -36,9 +34,7 @@ router.get("/Contemporary_Paintings/:id", async function (req, res) {
     const SelectedId = req.params;
     const result = await Contemporary_image_Table.find(SelectedId);
     res.send(result);
-    console.log(result);
   } catch (err) {
-    res.send("error");
     console.log(err);
   }
 });
@@ -47,9 +43,7 @@ router.get("/Sculptures", async function (req, res) {
   try {
     const result = await Sculpture_image_table.find();
     res.send(result);
-  } catch (err) {
-    console.log(err);
-  }
+  } catch (err) {}
 });
 
 router.get("/Sculptures/:id", async function (req, res) {
@@ -57,9 +51,7 @@ router.get("/Sculptures/:id", async function (req, res) {
     const SelectedId = req.params;
     const result = await Sculpture_image_table.find(SelectedId);
     res.send(result);
-    console.log(result);
   } catch (err) {
-    res.send("error");
     console.log(err);
   }
 });
@@ -78,9 +70,7 @@ router.get("/Mixed_Image/:id", async function (req, res) {
     const SelectedId = req.params;
     const result = await Mixed_Art.find(SelectedId);
     res.send(result);
-    console.log(result);
   } catch (err) {
-    res.send("error");
     console.log(err);
   }
 });
@@ -168,7 +158,7 @@ router.post("/Creater_SignUp", async (req, res) => {
         ArtWork,
         Work_Place,
       });
-      res.send(`Saved Successfully`);
+      res.send("Saved Successfully");
     }
   } catch (err) {
     console.log(err);
@@ -179,13 +169,13 @@ router.post("/Creater_Login", async (req, res) => {
   try {
     const { email, password } = req.body;
     const Creater = await SignUp_Creater.findOne({ email: email });
-   
+
     if (Creater) {
-      const Creater_Password = await bcrypt.compare(password,Creater.password,);
+      const Creater_Password = await bcrypt.compare(password, Creater.password);
       if (Creater_Password) {
-        res.send(`Login Successfully`);
+        res.send("Login Successfully");
       } else {
-        res.send(`Unauthorized`);
+        res.send("Unauthorized");
       }
     }
   } catch (err) {
@@ -193,25 +183,36 @@ router.post("/Creater_Login", async (req, res) => {
   }
 });
 
-router.post('/Creater/Event',async(req,res)=>{
-    try{
-      const {Event_Title,Event_Timings,Event_Location,Event_Description}=req.body
-      await Save_Event({Event_Title,Event_Timings,Event_Location,Event_Description})
-      res.send(`Saved suceesfully`)
-    }catch(err){
-      console.log(err)
-      res.send(error)
-    }
-})
-
-router.post('/Upcoming_Exibition',async(req,res)=>{
-  try{
-    const {Event_Title,Event_Timings,Event_Location,Event_Description}=req.body
-    await Upcoming_Exibition_Data({Event_Title,Event_Timings,Event_Location,Event_Description})
-    res.send(`Saved Successfully`)
-  }catch(err){
-    console.log(err)
+router.post("/Creater/Event", async (req, res) => {
+  try {
+    const { Event_Title, Event_Timings, Event_Location, Event_Description } =
+      req.body;
+    await Save_Event({
+      Event_Title,
+      Event_Timings,
+      Event_Location,
+      Event_Description,
+    });
+    res.send("Saved suceesfully");
+  } catch (error) {
+    console.log(err);
   }
-})
+});
+
+router.post("/Upcoming_Exibition", async (req, res) => {
+  try {
+    const { Event_Title, Event_Timings, Event_Location, Event_Description } =
+      req.body;
+    await Upcoming_Exibition_Data({
+      Event_Title,
+      Event_Timings,
+      Event_Location,
+      Event_Description,
+    });
+    res.send("Saved Successfully");
+  } catch (err) {
+    console.log(err);
+  }
+});
 
 module.exports = router;
