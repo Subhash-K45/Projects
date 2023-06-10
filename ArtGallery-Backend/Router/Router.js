@@ -17,7 +17,7 @@ const Upcoming_Exibition_Data = require("../Database/Upcoming_Exibition");
 const router = express.Router();
 
 router.get("/",async function(req,res){
-  res.send('Welcome To Our Gallery')
+  res.send('Welcome To Our Art Gallery')
 })
 router.get("/Gallery_Overview", async function (req, res) {
   res.send(["Contemporary Paintings", "Sculptures", "Mixed Image"]);
