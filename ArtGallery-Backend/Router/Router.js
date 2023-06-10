@@ -16,9 +16,18 @@ const Save_Event = require("../Database/EventUpdate");
 const Upcoming_Exibition_Data = require("../Database/Upcoming_Exibition");
 const router = express.Router();
 
-router.get("/", async function (req, res) {
+router.get("/Gallery_Overview", async function (req, res) {
   res.send(["Contemporary Paintings", "Sculptures", "Mixed Image"]);
 });
+
+router.get("/Contact",async function(req,res){
+  res.send({
+    phone:"(123)-456-7890",
+    email:"info@artgallery.com",
+    Address:`123 main st 
+    Anytown USA`
+  })
+})
 
 router.get("/Contemporary_Paintings", async function (req, res) {
   try {
