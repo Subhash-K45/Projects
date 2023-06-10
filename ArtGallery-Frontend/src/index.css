@@ -1,0 +1,15 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+ }
+.Home{
+    width:100vw;
+    height: 100vh;
+    background-image:url('https://media.istockphoto.com/id/941328776/photo/artists-collection-at-showroom.jpg?s=612x612&w=0&k=20&c=8SgKEsLZiRQ8bseHfiUk18FIagXCHZcE17nT1ApaPJY=');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
