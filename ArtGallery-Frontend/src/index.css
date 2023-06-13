@@ -1,15 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Mukta:wght@300;400;500;600;700;800&display=swap');
 *{
     margin:0;
     padding:0;
+    font-family: 'Comfortaa', cursive;
+    box-sizing: border-box;
 }
-body{
-    width: 100vw;
-    height: 100vh;
- }
-.Home{
-    width:100vw;
-    height: 100vh;
-    background-image:url('https://media.istockphoto.com/id/941328776/photo/artists-collection-at-showroom.jpg?s=612x612&w=0&k=20&c=8SgKEsLZiRQ8bseHfiUk18FIagXCHZcE17nT1ApaPJY=');
-    background-repeat:no-repeat;
-    background-size:cover;
+
+:root{
+    --purple:#AC4FC6;
+    --pink:#FB94DC;
+    --violet:#9768D9;
+    --orange:#FFAF19;
+    --yellow:#FFDB0D;
 }
