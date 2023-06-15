@@ -1,0 +1,5 @@
+bright purple -> #AC4FC6
+Pink -> #FB94DC
+Blue ->#9768D9
+Orange -> #FFAF19
+Yellow ->#FFDB0D
