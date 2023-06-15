@@ -41,7 +41,7 @@ const data = [
   },
   {
     id: 5,
-    amg: "https://jennysserendipity.files.wordpress.com/2015/08/filipino-artist-jonathan-benitez-mixed-media-collage-art-and-environmental-art-11.jpg",
+    img: "https://jennysserendipity.files.wordpress.com/2015/08/filipino-artist-jonathan-benitez-mixed-media-collage-art-and-environmental-art-11.jpg",
     category: "Mixed Media Works",
     price: 57,
     name: "Collage Environmental Art",
@@ -51,7 +51,7 @@ const data = [
   },
   {
     id: 6,
-    amg: "https://www.artisticmoods.com/wp-content/uploads/1.chrzest%C2%B415.jpg",
+    img: "https://www.artisticmoods.com/wp-content/uploads/1.chrzest%C2%B415.jpg",
     category: "Mixed Media Works",
     price: 19,
     name: "Wall Paintings",
@@ -96,7 +96,7 @@ const data = [
     price: 63,
     name: "Paper Art",
     artist: "Sarah",
-    aescription:
+    description:
       "A delicate and intricate mixed media artwork crafted entirely from meticulously hand-cut paper. This piece showcases the artist's attention to detail and mastery of paper manipulation.",
   },
   {

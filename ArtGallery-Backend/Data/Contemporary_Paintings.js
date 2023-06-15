@@ -151,7 +151,7 @@ const data = [
   },
   {
     id: 16,
-    img: "https://www.bing.com/images/search?view=detailV2&ccid=V89cFcmq&id=442E1EEDDD2BEA4A1167CA1272B4B02BB2C78320&thid=OIP.V89cFcmqwTOusWDBtEFkjgHaKS&mediaurl=https%3a%2f%2fwww.fidostudio.com%2fuploads%2f1%2f2%2f9%2f1%2f129192197%2fs192612268662456200_p157_i2_w2160.jpeg&exph=3000&expw=2160&q=contemporary+paintings&simid=608013738643780780&FORM=IRPRST&ck=6D94D9DDCA66786FFA2F727ECE435B2C&selectedIndex=17,",
+    img: "https://usercontent1.hubstatic.com/2193418_f520.jpg",
     category: "Contemporary Paintings",
     price: 27,
     name: "Digital art",
@@ -161,7 +161,7 @@ const data = [
   },
   {
     id: 17,
-    img: "https://www.bing.com/images/search?view=detailV2&ccid=Co6pAUAB&id=67B48B188AE57D41AA01810DADF6B6E68E3CDEB8&thid=OIP.Co6pAUABIJ2ZT7iLnkpG9gHaIB&mediaurl=https%3a%2f%2f2.bp.blogspot.com%2f--JfPffQ8S4c%2fWHzr0M7t-5I%2fAAAAAAAAAxQ%2f2cuP2igwUfMdKtwD06cvq_viCOPBY1seQCLcB%2fs1600%2fWojciech_Babski_12.jpg&exph=759&expw=700&q=contemporary+paintings&simid=608044851402331654&FORM=IRPRST&ck=28599B2373C75C5BF30751A4F935E2A1&selectedIndex=62",
+    img: "http://3.bp.blogspot.com/-X-d62Foryak/Tn4kEB2XGJI/AAAAAAAAdC4/AZ3xQVS3Byw/s1600/figurative+artist%252C+Danielle+Richard%252Ccanvas+painting%252Ccontemporary+art+%25282%2529.jpg",
     category: "Contemporary Paintings",
     price: 25,
     name: "Female Figurative Art",

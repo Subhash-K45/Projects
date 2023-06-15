@@ -1,10 +1,12 @@
 import { useEffect,useState } from "react"
 import axios from "axios"
+import { Link } from "react-router-dom"
 const Sculptures=()=>{
     const [state,setState]=useState()
-    const [loading,setLoading]=useState(true)    
+    const [loading,setLoading]=useState(true)   
+     
     useEffect(()=>{
-        axios.get("https://zany-erin-sparrow-wear.cyclic.app/Sculptures")
+        axios.get("https://pear-cooperative-gazelle.cyclic.app/Sculptures")
         .then(response=>{
         setState(response.data)
         setLoading(false)
@@ -13,19 +15,22 @@ const Sculptures=()=>{
     },[])
     return(
         <div className="Sculptures">
+            <h2>Sculptures</h2>
             <div className="Gallery-Overview-Blur-Box"></div>
             <div className="Sculptures-item-Box">
                 {console.log(state)}
-                {loading? 'Loading ...':state.map(({id,img,price,createrName,description,name})=>
-                (
-                    <div key={id}>
+                {loading? 'Loading ...':state.map(({id,img,price,createrName,description,name,category})=>{
+                    const link="/purchase/:"+id+"/:Sculptures"
+                return(
+                    <div class="Sculptures-element"key={id}>
                         <img src={img} alt={name}/>
-                        <p>{name}</p>
-                        <p>{description}</p>
-                        <p>Creater:{createrName}</p>
-                        <p>price:{price}</p>
+                        <p className="Name">{name}</p>
+                        <p className="Creater"><span className="creater">Creater : </span>{createrName}</p>
+                        <p className="price"><span className="Price">price : </span>${price}</p>
+                        <p className="Description">{description}</p>
+                        <Link to={link}><button className="purchase-button">Purchase </button></Link>
                     </div>
-                )
+                )}
                 )}
             </div>
         </div>

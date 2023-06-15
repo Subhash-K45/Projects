@@ -15,6 +15,7 @@ const saveData = async () => {
         description,
       });
       await Image.save();
+      
     } catch (error) {
       console.error(`Error saving ${id}:`, error);
     }

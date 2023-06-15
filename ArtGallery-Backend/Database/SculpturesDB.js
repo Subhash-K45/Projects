@@ -23,6 +23,7 @@ const saveData = async function () {
         description,
       });
       await Sculpture.save();
+      
     } catch (error) {
       console.error(`Error saving ${id}:`, error);
     }
