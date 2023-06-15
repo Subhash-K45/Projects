@@ -107,7 +107,7 @@ const data = [
     name: "Mixed media art",
     artist: "Elizabeth Peyton",
     description:
-      ": Art that incorporates multiple materials, techniques, or mediums, often combining traditional painting with elements of collage, sculpture, or digital processes.",
+      "Art that incorporates multiple materials, techniques, or mediums, often combining traditional painting with elements of collage, sculpture, or digital processes.",
   },
   {
     id: 12,

@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 import { useState,useEffect } from 'react';
 
 const OverView = ()=>{
@@ -10,13 +11,13 @@ const OverView = ()=>{
        },[]);
      return (
         <>  
-            <div>
+            <div className="OverView-Headings">
                 <h1>Gallery OverView</h1>
                 <p>Our gallery is home to a diverse range of artistic styles and forms. From contemporary paintings and sculptures to mixed media works from around the world, there's something for everyone.</p>
             </div>
            
             <div className="Contemporary">
-                <img src="." alt="Contemporary Image"/>
+                <img src="./Images/Contemporary_avatar.avif" alt="Contemporary Image"/>
                 <h2>Contemporary Pintings</h2>
                 <p>Experience color, dimension, and innovation.</p>
             </div>

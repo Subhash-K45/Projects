@@ -61,7 +61,7 @@ const data = [
   },
   {
     id: 7,
-    img: "https://a.1stdibscdn.com/archivesE/upload/1121188/f_143288996948967618579/14328899_master.jpg",
+    img: "https://2.bp.blogspot.com/-vCgMJTsb_Mo/Ws49_SebxdI/AAAAAAAAYvk/-Q9Pc59FdlANT5EazBE1P6or8iba1uRRQCLcBGAs/s1600/30%2BOf%2BThe%2BWorld%2527s%2BMost%2BIncredible%2BSculptures%2BThat%2BTook%2BOur%2BBreath%2BAway%2B-%2BReflection%2Bsculpture%2Bin%2Bthe%2BUnited%2Bkingdom.jpg",
     category: "Sculptures",
     price: 33,
     name: "Eternal Reflections",
@@ -71,7 +71,7 @@ const data = [
   },
   {
     id: 8,
-    img: "https://cdn.britannica.com/38/190738-050-6466C7DA/bronze-Lyon-France-Henry-Moore.jpg",
+    img: "https://i.pinimg.com/originals/61/20/1e/61201e3c2c36ea89c65d960644284cdf.jpg",
     category: "Sculptures",
     price: 22,
     name: "Whispers of Bronze",
@@ -81,7 +81,7 @@ const data = [
   },
   {
     id: 9,
-    img: "https://www.groundsforsculpture.org/wp-content/uploads/2017/02/ROBERTO-TOSCANO-web-1.jpg",
+    img: "https://th.bing.com/th/id/OIP.V4ZVabGYzPeGRR9xyRAhkgHaE8?pid=ImgDet&rs=1",
     category: "Sculptures",
     price: 31,
     name: "Sculptural Symphony",
@@ -91,7 +91,7 @@ const data = [
   },
   {
     id: 10,
-    img: "https://www.saatchiart.com/art/Installation-Breaking-the-Wall/405603/8261306/view",
+    img: "https://th.bing.com/th/id/OIP.hzG0LE4D0GchzH0BpvdqJwHaEO?pid=ImgDet&rs=1",
     category: "Sculptures",
     price: 35,
     name: "Breaking the Wall",
@@ -101,7 +101,7 @@ const data = [
   },
   {
     id: 11,
-    img: "https://cdn.britannica.com/97/175297-050-6161EFE6/Sculpture-Horse-Birds-Bridge-Mathurin-Moreau-1883.jpg",
+    img: "https://designclarity.net/files/design-clarity_human-movement-motion-sculpture_ltxhtjbkqs-1200x742.jpg",
     category: "Sculptures",
     price: 28,
     name: "Harmony in Motion",
@@ -111,7 +111,7 @@ const data = [
   },
   {
     id: 12,
-    img: "https://www.artbureau.ru/upload/iblock/159/mucha.jpg",
+    img: "https://th.bing.com/th/id/R.6ddac2b538eff325e3517ad828e0d5d6?rik=XEVaWVElS%2b1v3g&riu=http%3a%2f%2f1.bp.blogspot.com%2f-_8WIq4T1IJY%2fT4jZQZepYmI%2fAAAAAAAAPVo%2fosgT80E5A_M%2fs1600%2fDSC_0529.JPG&ehk=6l%2blWlZLxug6MeoYKaHMyAg4E433sINsWYAgLpslPAA%3d&risl=&pid=ImgRaw&r=0",
     category: "Sculptures",
     price: 26,
     name: "Enchanting Elegance",
@@ -121,7 +121,7 @@ const data = [
   },
   {
     id: 13,
-    img: "https://www.rhs.org.uk/rhsimages/9781909807074_9781909807074.jpg",
+    img: "https://th.bing.com/th/id/OIP.CN4a0zs4TiFc5quayxh7mQHaHa?pid=ImgDet&rs=1",
     category: "Sculptures",
     price: 23,
     name: "Garden Serenade",
@@ -131,7 +131,7 @@ const data = [
   },
   {
     id: 14,
-    img: "https://www.museothyssen.org/sites/default/files/artworks/1930.25.jpg",
+    img: "https://brianfell.org.uk/wp-content/uploads/2019/11/Widescreen-Brian-Fell-Abstract-Art-Sculpture.jpg",
     category: "Sculptures",
     price: 30,
     name: "Abstract Visions",
@@ -141,7 +141,7 @@ const data = [
   },
   {
     id: 15,
-    img: "https://assets.saatchiart.com/saatchi/1056368/art/6570570/5643207-WWBDCGVQ-7.jpg",
+    img: "https://www.cycladia.com/blog/wp-content/uploads/2014/09/Teodosio_Sectio_05-300x200.jpg",
     category: "Sculptures",
     price: 21,
     name: "Dancing Shadows",
@@ -191,7 +191,7 @@ const data = [
   },
   {
     id: 20,
-    img: "https://th.bing.com/th/id/OIP.GroXOx5n4u5IbFtgsHvkiQHaFj?pid=ImgDet&rs=1",
+    img: "https://i.pinimg.com/originals/3f/9a/83/3f9a834a1e32b99e4f83f09359481fcb.jpg",
     category: "Sculptures",
     price: 67,
     name: "Harmony in Motion",
