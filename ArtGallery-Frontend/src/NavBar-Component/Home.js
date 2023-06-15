@@ -5,8 +5,7 @@ import Nav from '../Nav'
 import OverView from '../OverviewComponent'
 
 const Home=()=>{
-    
-   return(
+    return(
         <div className="Main-Page">
             <div className="Home">
                 <nav>
@@ -25,15 +24,13 @@ const Home=()=>{
                 </div>
             </div>
             <div className="Gallery-Overview">
-                <div className="Blur-Box"></div>
+                <div className="Blur-Box">
+                </div>
                 <div className="OverView-Box">
                     <OverView />
                 </div>
             </div>
-            <div>
-                hello
-            </div>
-    </div>
+        </div>
     )
 }
 export default Home
