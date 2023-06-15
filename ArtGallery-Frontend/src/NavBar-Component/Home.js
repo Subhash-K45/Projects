@@ -5,10 +5,10 @@ import Nav from '../Nav'
 const Home=()=>{
     const [state,setState]=useState([])
    useEffect(()=>{
-       axios.get('https://ill-ox-buckle.cyclic.app/Gallery_Overview')
-       .then(response=>setState(response))
+       axios.get('https://zany-erin-sparrow-wear.cyclic.app/Gallery_Overview')
+       .then(response=>setState(response.data))
        .catch(err=>console.log(err))
-    })
+    },[]);
     return(
         <div className="Main-Page">
             <div className="Home">
@@ -20,7 +20,7 @@ const Home=()=>{
                         <div className="Heading">
                             Welcome to Our Art Gallery
                         </div>
-                        <p classname="Heading-description">
+                        <p className="Heading-description">
                             Discover extraordinary exhibits, view stunning pieces in our permanent collection, 
                             and participate in engaging events. Experience the art.
                         </p>
@@ -29,7 +29,7 @@ const Home=()=>{
             </div>
             <div className="Gallery-Overview">
                 <div className="categories">
-                    {console.log(state)}
+                    {state}
                 </div>
             </div>
     </div>
