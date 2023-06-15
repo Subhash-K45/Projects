@@ -1,15 +1,12 @@
-import { useState ,useEffect} from 'react'
-import axios from 'axios'
+import { useState} from 'react'
+
 import './Nav-Bar-Component.css'
 import Nav from '../Nav'
+import OverView from '../OverviewComponent'
+
 const Home=()=>{
-    const [state,setState]=useState([])
-   useEffect(()=>{
-       axios.get('https://zany-erin-sparrow-wear.cyclic.app/Gallery_Overview')
-       .then(response=>setState(response.data))
-       .catch(err=>console.log(err))
-    },[]);
-    return(
+    
+   return(
         <div className="Main-Page">
             <div className="Home">
                 <nav>
@@ -28,9 +25,13 @@ const Home=()=>{
                 </div>
             </div>
             <div className="Gallery-Overview">
-                <div className="categories">
-                    {state}
+                <div className="Blur-Box"></div>
+                <div className="OverView-Box">
+                    <OverView />
                 </div>
+            </div>
+            <div>
+                hello
             </div>
     </div>
     )
