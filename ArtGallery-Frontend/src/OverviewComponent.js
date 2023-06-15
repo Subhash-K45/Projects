@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useState,useEffect } from 'react';
-import './Images/Contemporary_avatar.avif'
+
 const OverView = ()=>{
     const [state,setState]=useState([])
     useEffect(()=>{
@@ -16,7 +16,7 @@ const OverView = ()=>{
             </div>
            
             <div className="Contemporary">
-                <img src="./Images/Contemporary_avatar.avif" alt="Contemporary Image"/>
+                <img src="." alt="Contemporary Image"/>
                 <h2>Contemporary Pintings</h2>
                 <p>Experience color, dimension, and innovation.</p>
             </div>
