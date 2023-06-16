@@ -208,8 +208,19 @@ router.post("/Creater/Event", async (req, res) => {
       Event_Location,
       Event_Description,
     });
-    res.send("Saved suceesfully");
+    
+    res.send("Saved SucessFully");
   } catch (error) {
+    console.log(err);
+  }
+});
+
+router.get("/Event",async (req,res)=>{
+  try{
+    const Event=await Event_Update.findOne({})
+    res,send(Event);
+  }
+    catch(err){
     console.log(err);
   }
 });
