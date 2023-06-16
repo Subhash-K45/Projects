@@ -16,22 +16,21 @@ const Purchase = () => {
       setLoading(false);
     });
   }, []);
-
-  console.log(state[0]);
-
-  if (loading) {
+if (loading) {
     return <div>Loading...</div>;
   }
 
   return (
-    <div className="Purshase-Product">
+    <div className="Purchase-Product">
+      <h2>Purchase Products</h2>
       {state.map(({ img, name, price, category, description }) => (
-        <div key={id}>
-          <img src={img} alt="" />
-          <p>{name}</p>
-          <p>{price}</p>
-          <p>{category}</p>
-          <p>{description}</p>
+        <div key={id} className="Products">
+          <img src={img} alt="" className="Product-Image"/>
+          <p className="Name">{name}</p>
+          <p className="price">Price : ${price}</p>
+          <p className="category">{category}</p>
+          <p className="Description">{description}</p>
+          <button className="purchase-button">Purchase</button>
         </div>
       ))}
     </div>
