@@ -7,6 +7,7 @@ import Contemporary from "./Gallery-Overview-Components/Contemporary";
 import Sculptures from "./Gallery-Overview-Components/Sculputures";
 import Mixed_Art from "./Gallery-Overview-Components/Mixed_Art";
 import Purchase from "./Purchase-Page";
+import SignUpPage from "./SignUp";
 const Router= () => {
   return(
     <>
@@ -21,6 +22,7 @@ const Router= () => {
         <Route path="/purchase/:id/:query" element={<Purchase/>}/>
         <Route path="/Mixed_Art/purchase/:id/:query" element={<Purchase/>}/>
         <Route path="/Sculptures/purchase/:id/:query" element={<Purchase/>}/>
+        <Route path ="/User_SignUp" element={<SignUpPage/>}/>
       </Routes>
     </>
   )

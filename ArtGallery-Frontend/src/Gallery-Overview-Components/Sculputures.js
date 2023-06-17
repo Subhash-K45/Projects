@@ -6,7 +6,7 @@ const Sculptures=()=>{
     const [loading,setLoading]=useState(true)   
      
     useEffect(()=>{
-        axios.get("https://pear-cooperative-gazelle.cyclic.app/Sculptures")
+        axios.get("https://artgallery-api.onrender.com/Sculptures")
         .then(response=>{
         setState(response.data)
         setLoading(false)
@@ -16,7 +16,6 @@ const Sculptures=()=>{
     return(
         <div className="Sculptures">
             <h2>Sculptures</h2>
-            <div className="Gallery-Overview-Blur-Box"></div>
             <div className="Sculptures-item-Box">
                 {console.log(state)}
                 {loading? 'Loading ...':state.map(({id,img,price,createrName,description,name,category})=>{

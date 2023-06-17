@@ -9,6 +9,7 @@ body{
  }
  .Main-Page{
     overflow-x: hidden;
+    
  }
  .navbar {
     width:100%;
@@ -65,6 +66,17 @@ body{
     font-size:4rem;
     font-weight: bolder;
     letter-spacing: 0.7px;
+}
+@media screen and (max-width:667px) {
+    .Content .Heading{
+        font-size: large;
+    }
+    .Content .Heading-description{
+        font-size: small;
+    }
+    .OverView-Headings> h1{
+        font-size: large;
+    }
 }
 .Content p {
    margin-left:7%;
@@ -166,31 +178,7 @@ body{
     margin-top:1.5rem;
     margin-left:2%;
 }
-.Gallery-Overview-Blur-Box{
-    position: absolute;
-    top: 10%;
-    left:0%;
-    width:100%;
-    min-height:710%;
-    background-color: rgba(42, 18, 75, 0.5);
-    filter:blur(15px); 
-    z-index: -1;
-}
-@media  screen and (width:1700px) {
-    .Gallery-Overview-Blur-Box{
-        height:590%;
-    }
-}
-@media screen and (max-width:1640px){
-    .Gallery-Overview-Blur-Box{
-        height:1000%;
-    }
-}
-@media screen and (max-width:1085px) {
-    .Gallery-Overview-Blur-Box{
-        height:1880%;
-    }
-}
+
 .Mixed_Art-item-Box,.Sculptures-item-Box,.Contemporary-item-Box{
     margin-top:50px;
     margin-right: 5%;
@@ -198,6 +186,8 @@ body{
     flex-wrap: wrap;
     gap:10px;
     justify-content: space-around;
+    background-color: rgba(12, 12, 30, 0.5);
+    backdrop-filter: blur(15px);
 }
 .Mixed_Art-element>img,.Sculptures-element>img,.Contemporary-elements> img{
     width:100%;
@@ -283,16 +273,18 @@ body{
     width:100vw;
     height: 100vh;
     display:grid;
-    place-items:center;
+    justify-content: center;
 }
 .User_Login{
-    width: 40%;
-    height: 38%;
+    width: 100%;
     max-width: 400px;
     min-width: 200px;
-    border:3px solid #7f7c7c;
-    border-radius:15px;
-    padding:1.5rem;
+    border: 3px solid #7f7c7c;
+    border-radius: 15px;
+    padding: 1.5rem;
+    height: fit-content;
+    transform: translate(0, 20%);
+    box-sizing: border-box;
 }
 .User_Login > form{
     width:100%;
@@ -342,7 +334,7 @@ body{
     display:flex;
     position:relative;
     right:12%;
-    top:15%;
+    top:10px;
     font-size: 1.8rem;
     color:white;
     cursor:pointer;
@@ -357,4 +349,225 @@ body{
     border:none;
     outline:none;
     cursor:pointer;
+}
+.container {
+    width: 80%;
+    max-width:600px;
+    margin: 10% auto;
+    padding: 20px;
+    border: 3px solid #7f7c7c;
+    padding:2rem;
+    box-sizing: border-box;
+    border-radius:15px;
+  }
+  
+  .heading {
+    color: var(--pink);
+    font-size: 29px;
+    font-weight: bolder;
+}
+  .form-group {
+    margin: 20px 0;
+  }
+
+  .User-Input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(42, 18, 75, 0.5);
+    border:none;
+    outline:none;
+    color:white;
+    text-indent: 5px;
+    padding:5px;
+    font-size: medium;
+    height: 20px;
+  }
+  
+.button{
+    background-color: var(--orange);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+.button:hover {
+    background-color: var(--yellow);
+  }
+.Events{
+    width:100%;
+    height: fit-content;
+    box-sizing: border-box;
+    margin-top: 2rem;
+    margin-left: -1%;
+    background-color: rgba(26, 26, 54, 0.5);
+    backdrop-filter: blur(15px);
+}
+.Event-Box{
+    height: 100%;
+    width:100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    border: 1px solid #413e3e;
+}
+.Event-Message-Box{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap:30px;
+}
+.Event-Box-Headings{
+    align-self: center;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.Event-Box-Headings > h1{
+    color:var(--purple);
+}
+.Event-Box-Headings p {
+    color:#d5c2ef;
+}
+.Event-Box-Content{
+    display: flex;
+    align-self: center;
+    gap:20px;
+    flex-wrap: wrap;
+}
+.Events-Elements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    width:400px;
+    min-width: 200px;
+}
+.Events-Elements>h2{
+    color:#FB94DC;
+    align-self:flex-start;
+}
+.Events-Elements > p{
+    color:#e3daef;
+    justify-self: baseline;
+    align-self: baseline;
+}
+.Events-Elements > a{
+    color:#FB94DC;
+    align-self: flex-start;
+}
+.Visit-Box{
+    width:70%;
+    padding:2rem;
+}
+.Visit-Content-Box{
+    width:100%;
+    border :2px solid #413e3e;
+    transform: translateX(20%);
+    border-radius:15px;
+    background-color: rgba(12, 12, 30, 0.5);
+    backdrop-filter: blur(15px);
+}
+.Visit{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    padding:2rem;
+}
+.Visit-Headings{
+    display: flex;
+    flex-direction:column;
+    gap:10px;
+}
+.Visit-Headings > h1{
+    color:var(--pink);
+    font-size:2.5rem;
+}
+.Visit-Headings > p{
+    color:#e3daef;
+    font-size:1.21rem;
+}
+.Visit-Content{
+    align-self: flex-start;
+    width:100%;
+}
+.Visit-Content > table{
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: baseline;
+}
+.Visit-Content > table > tr{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Visit-Content > table > tr > th{
+    color:var(--purple);
+    font-size: 20px;
+}
+.Visit-Content > table > tr> td{
+    color:#e3daef;
+    font-size: 20px;
+    justify-self: unset;
+}
+.Contact-Home{
+    width:100%;
+    padding:2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: center;
+    justify-content: center;
+}
+.Contact-Headings{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.Contact-Headings > h1{
+    color:var(--pink);
+    font-size: 2rem;
+}
+.Contact-Headings > p{
+    color:#e3daef;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+.Content-Summary{
+    display:flex;
+    flex-wrap: wrap;
+    gap:50px;
+    row-gap: 30px;
+}
+.Content-Summary > .Phone,
+.Content-Summary >.email,
+.Content-Summary >.Address{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.Content-Summary > .Phone > h2,
+.Content-Summary >.email > h2,
+.Content-Summary >.Address > h2{
+    color:var(--purple);
+    font-weight: 700;
+}
+.Content-Summary > .Phone > h3,
+.Content-Summary >.email > h3,
+.Content-Summary >.Address > h3{
+    color:#d5c2ef;
+    font-weight: 500;
+}
+footer{
+    background-color: rgba(26, 26, 54, 0.5);
+    backdrop-filter: blur(15px);
+    border:2px solid #413e3e;
 }

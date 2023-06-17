@@ -6,7 +6,7 @@ const Mixed_Art=()=>{
     const [loading,setLoading]=useState(true) 
        
     useEffect(()=>{
-        axios.get("https://pear-cooperative-gazelle.cyclic.app/Mixed_Image")
+        axios.get("https://artgallery-api.onrender.com/Mixed_Image")
         .then(response=>{
         setState(response.data)
         setLoading(false)
@@ -16,7 +16,6 @@ const Mixed_Art=()=>{
     return(
         <div className="Mixed_Art">
             <h2>Mixed Media Works</h2>
-            <div className="Gallery-Overview-Blur-Box"></div>
             <div className="Mixed_Art-item-Box">
                 {console.log(state)}
                 {loading? 'Loading ...':state.map(({id,img,price,artist,description,name,category})=>{

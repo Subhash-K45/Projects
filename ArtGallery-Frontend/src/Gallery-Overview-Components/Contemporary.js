@@ -5,7 +5,7 @@ const Contemporary=()=>{
     const [state,setState]=useState()
     const [loading,setLoading]=useState(true)
     useEffect(()=>{
-        axios.get("https://pear-cooperative-gazelle.cyclic.app/Contemporary_Paintings")
+        axios.get("https://artgallery-api.onrender.com/Contemporary_Paintings")
         .then(response=>{
             setState(response.data)
             setLoading(false)
@@ -14,8 +14,7 @@ const Contemporary=()=>{
     return(
         <div className="Contemporary">
             <h2>Contemporary Paintings</h2>
-            <div className="Gallery-Overview-Blur-Box"></div>
-            <div className="Contemporary-item-Box">
+                <div className="Contemporary-item-Box">
                 {loading? 'Loading ...':state.map(({id,img,price,artist,description,name,category})=>{
                     const link=`/purchase/:${id}/:Contemporary_Paintings`
                 return(

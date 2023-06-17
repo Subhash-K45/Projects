@@ -3,7 +3,8 @@ import Event from '../Event'
 import './Nav-Bar-Component.css'
 import Nav from '../Nav'
 import OverView from '../OverviewComponent'
-
+import Visit from '../VisitUs'
+import Contact_Home from '../Contact-Home'
 const Home=()=>{
     return(
         <div className="Main-Page">
@@ -31,14 +32,18 @@ const Home=()=>{
                 </div>
             </div>
             <div className="Events">
-                <div className="Event-Blur-Box">
-
-                </div>
                 <div className="Event-Box">
                     <Event/>
                 </div>
-                    
             </div>
+            <div className="Visit-Box">
+                <div className="Visit-Content-Box">
+                    <Visit/>
+                </div>
+            </div>
+            <footer>
+                <Contact_Home/>
+            </footer>
         </div>
     )
 }

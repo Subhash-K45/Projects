@@ -8,7 +8,7 @@ const Purchase = () => {
   let { id, query } = useParams();
   id = id.slice(1);
   query = query.slice(1);
-  const URL = `https://pear-cooperative-gazelle.cyclic.app/${query}/${id}`;
+  const URL = `https://artgallery-api.onrender.com/${query}/${id}`;
 
   useEffect(() => {
     axios.get(URL).then((response) => {

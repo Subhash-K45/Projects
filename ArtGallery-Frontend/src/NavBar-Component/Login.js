@@ -28,7 +28,7 @@ const Login = ()=>{
                     </div>
                     <p className="SignUp">Could'int Have a Acoount ?  
                     <span className="SignUp_Link">
-                    <Link to="User_SignUp"> SignUp</Link></span></p>
+                    <Link to="/User_SignUp"> SignUp</Link></span></p>
                     <button type="submit"  className="Submit">Submit</button>
                     
                 </form>

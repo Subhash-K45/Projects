@@ -5,7 +5,7 @@ import { useState,useEffect } from 'react';
 const OverView = ()=>{
     const [state,setState]=useState([])
     useEffect(()=>{
-        axios.get('https://pear-cooperative-gazelle.cyclic.app/Gallery_Overview')
+        axios.get('https://artgallery-api.onrender.com/Gallery_Overview')
         .then(response=>setState(response.data))
         .catch(err=>console.log(err))
        },[]);
