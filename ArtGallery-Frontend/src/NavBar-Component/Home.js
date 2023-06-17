@@ -1,5 +1,5 @@
 import { useState} from 'react'
-
+import Event from '../Event'
 import './Nav-Bar-Component.css'
 import Nav from '../Nav'
 import OverView from '../OverviewComponent'
@@ -29,6 +29,15 @@ const Home=()=>{
                 <div className="OverView-Box">
                     <OverView />
                 </div>
+            </div>
+            <div className="Events">
+                <div className="Event-Blur-Box">
+
+                </div>
+                <div className="Event-Box">
+                    <Event/>
+                </div>
+                    
             </div>
         </div>
     )

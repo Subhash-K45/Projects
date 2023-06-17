@@ -12,6 +12,7 @@ body{
  }
  .navbar {
     width:100%;
+    height: 50px;
     display:flex;
     justify-content: end;
     padding:2rem 2rem 2rem 0;
@@ -277,4 +278,83 @@ body{
     font-size: 3rem;
     letter-spacing: 0.2px;
     font-weight: bolder;
+}
+.Login{
+    width:100vw;
+    height: 100vh;
+    display:grid;
+    place-items:center;
+}
+.User_Login{
+    width: 40%;
+    height: 38%;
+    max-width: 400px;
+    min-width: 200px;
+    border:3px solid #7f7c7c;
+    border-radius:15px;
+    padding:1.5rem;
+}
+.User_Login > form{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2.7rem;
+    margin-top: 26px;
+}
+.User_Login > form input{
+    width:100%;
+    height:40px;
+    text-indent:5px;
+    border:none;
+    outline:none;
+    background-color:rgba(42, 18, 75, 0.5);
+    padding:0.2rem;
+    color:white;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.User_Login > h2{
+    color:#FB94DC;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing:0.2px;
+}
+.SignUp{
+    
+    color:#9768d9;
+}
+.SignUp a{
+    color:#d5c2ef;
+    cursor:pointer;
+    text-decoration:none;
+}
+.password-inline{
+    display:flex;
+    width:105%;
+}
+.password-inline > input{
+    width:999px;
+}
+.password-inline > span{
+    display:flex;
+    position:relative;
+    right:12%;
+    top:15%;
+    font-size: 1.8rem;
+    color:white;
+    cursor:pointer;
+}
+.Submit{
+    background-color: #9768d9;
+    color:white;
+    font-size:1.21rem;
+    font-weight: 300;
+    padding:7px;
+    border-radius: 5px;
+    border:none;
+    outline:none;
+    cursor:pointer;
 }
