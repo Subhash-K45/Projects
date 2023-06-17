@@ -200,18 +200,16 @@ router.post("/Creater_Login", async (req, res) => {
 
 router.post("/Creater/Event", async (req, res) => {
   try {
-    const { Event_Title, Event_Timings, Event_Location, Event_Description } =
-      req.body;
+    const { Event_Title, Event_Timings, Event_Location, Event_Description } = req.body;
     await Save_Event({
       Event_Title,
       Event_Timings,
       Event_Location,
       Event_Description,
     });
-    
     res.send("Saved SucessFully");
   } catch (error) {
-    console.log(err);
+    console.log(error);
   }
 });
 
