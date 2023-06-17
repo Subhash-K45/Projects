@@ -7,7 +7,7 @@ const router = require("./Router/Router");
 const PORT = 8080;
 const path=require('path')
 
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 // const corsOptions = {
 //   origin: '*', 
 //   methods: ['GET', 'POST', 'PUT', 'DELETE'],
