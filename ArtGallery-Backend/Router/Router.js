@@ -218,7 +218,7 @@ router.post("/Creater/Event", async (req, res) => {
 router.get("/Event",async (req,res)=>{
   try{
     const Event=await Event_Update.findOne({})
-    res,send(Event);
+    res.send(Event);
   }
     catch(err){
     console.log(err);
