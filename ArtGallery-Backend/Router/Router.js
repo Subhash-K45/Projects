@@ -126,7 +126,7 @@ router.post("/User_SignUp", async function (req, res) {
     if (check) {
       res.send("userFound");
     } else {
-      saveData({ firstName, lastName, email, password, Phone });
+      saveData({ firstName, lastName, email, Password, Phone });
       res.send("Saved Successfully");
     }
   } catch (err) {
