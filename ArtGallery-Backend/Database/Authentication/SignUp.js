@@ -6,7 +6,7 @@ const saveData = async function ({
   firstName,
   lastName,
   email,
-  password,
+  Password,
   Phone,
 }) {
   try {
@@ -14,7 +14,7 @@ const saveData = async function ({
       firstName: firstName,
       lastName: lastName,
       email: email,
-      password: password,
+      Password: password,
       Phone: Phone,
     });
     await SignUp.save();
