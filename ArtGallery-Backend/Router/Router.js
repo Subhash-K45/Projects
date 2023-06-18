@@ -118,11 +118,10 @@ router.get("/Artist", async function (req, res) {
 
 router.post("/User_SignUp", async function (req, res) {
   try {
-    const { firstName, lastName, email, Password, Phone } = req.body;
+    let { firstName, lastName, email, Password, Phone } = req.body;
     const check = await SignUp_User.findOne({ email: email });
     const Hashed_User_Password = await Hashed_Password(Password);
-    const password = await Hashed_User_Password;
-    console.log(typeof password);
+    Password = Hashed_User_Password;
     if (check) {
       res.send("userFound");
     } else {

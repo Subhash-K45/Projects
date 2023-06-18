@@ -41,7 +41,7 @@ const SignUp_User = mongoose.model("User", {
   lastName: String,
   email: String,
   Password: String,
-  Phone: Number,
+  Phone: String,
 });
 
 const SignUp_Creater = mongoose.model("Creater", {
