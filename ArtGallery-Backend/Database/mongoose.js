@@ -40,7 +40,7 @@ const SignUp_User = mongoose.model("User", {
   firstName: String,
   lastName: String,
   email: String,
-  password: String,
+  Password: String,
   Phone: Number,
 });
 
