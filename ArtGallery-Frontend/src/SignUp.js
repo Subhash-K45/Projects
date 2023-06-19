@@ -1,15 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+import axios from 'axios';
 const SignUpPage = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [phone, setPhone] = useState('');
-
-  const handleSubmit = (e) => {
+  const [Password, setPassword] = useState('');
+  const [Phone, setPhone] = useState('');
+  const [submitForm,setSubmitForm]=useState(false)
+  useEffect(() => {
+    if (submitForm) {
+      axios
+        .post("https://artgallery-api.onrender.com/User_SignUp", {
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          Password: Password,
+          Phone: Phone,
+        })
+        .then((response) => console.log(response))
+        .catch((error) => console.error(error))
+        .finally(() => {
+          setFirstName("");
+          setLastName("");
+          setEmail("");
+          setPassword("");
+          setPhone("");
+          setSubmitForm(false);
+        });
+    }
+  }, [submitForm]);
+  
+  function handleSubmit(e) {
     e.preventDefault();
-    console.log('Form submitted:', {firstName, lastName, email, password, phone });
-  };
+    setSubmitForm(true);
+    console.log("Form submitted:", { firstName, lastName, email, Password, Phone });
+  }
+  
 
   return (
     <div className="container">
@@ -49,7 +75,7 @@ const SignUpPage = () => {
             type="password"
             placeholder="Password"
             className="User-Input"
-            value={password}
+            value={Password}
             onChange={(e) => setPassword(e.target.value)}
           required/>
         </div>
@@ -58,7 +84,7 @@ const SignUpPage = () => {
             type="tel"
             placeholder="Phone"
             className="User-Input"
-            value={phone}
+            value={Phone}
             onChange={(e) => setPhone(e.target.value)}
           required/>
         </div>
