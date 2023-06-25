@@ -141,7 +141,7 @@ router.post("/User_login", async function (req, res) {
       const Check_Password = await bcrypt.compare(password, User.Password);
       const Name = User.firstName
       if (Check_Password) {
-        res.send("Login Successfull",firstName);
+        res.send("Login Successfull",Name);
       } else {
         res.send("Incorrect Password");
       }
@@ -184,7 +184,6 @@ router.post("/Creater_Login", async (req, res) => {
   try {
     const { email, password } = req.body;
     const Creater = await SignUp_Creater.findOne({ email: email });
-
     if (Creater) {
       const Creater_Password = await bcrypt.compare(password, Creater.password);
       if (Creater_Password) {
