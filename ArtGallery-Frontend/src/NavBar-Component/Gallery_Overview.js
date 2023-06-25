@@ -81,8 +81,11 @@ const Gallery_OverView = () => {
             className="select"
             onInput={(e) => handleOptionChange(e)}
           >
+            {!loading && <>
             <option>{Selction_Array[0]}</option>
             <option>{Selction_Array[1]}</option>
+            </>}
+            
           </select>
         </div>
         <div className="example-options">
@@ -102,7 +105,7 @@ const Gallery_OverView = () => {
               <p>Loading...</p>
             ) : (
               <ul>
-                {contemporary.map(({ artist, _id }, index) => {
+                {contemporary && contemporary.map(({ artist, _id }, index) => {
                   if (index < 16) {
                     return <li key={_id}>{artist}</li>;
                   }
@@ -113,7 +116,7 @@ const Gallery_OverView = () => {
             <p>Loading...</p>
           ) : (
             <ul>
-              {contemporary.map(({ name, _id }, index) => {
+              {contemporary && contemporary.map(({ name, _id }, index) => {
                 if (index < 16) {
                   return <li key={_id}>{name}</li>;
                 }

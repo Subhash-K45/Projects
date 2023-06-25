@@ -1,6 +1,5 @@
 import { useState} from 'react'
 import Event from '../Event'
-import './NavBar-Component.css'
 import Nav from '../Nav'
 import OverView from '../OverviewComponent'
 import Visit from '../VisitUs'

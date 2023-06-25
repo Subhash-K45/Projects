@@ -1,14 +1,16 @@
-import { Link } from "react-router-dom";
-import { useState ,useEffect} from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import axios from "axios";
+import { UserProvider } from "../Context";
 
 const Login = () => {
-  const [open, Setopen] = useState(false);
+  const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -16,7 +18,7 @@ const Login = () => {
   }
 
   function handleEye() {
-    Setopen((prev) => !prev);
+    setOpen((prev) => !prev);
   }
 
   useEffect(() => {
@@ -27,26 +29,26 @@ const Login = () => {
           password: password,
         })
         .then((response) => {
-       
           console.log(response);
-          
-          if (response.data === "Login Successful") {
-           
+          if (response.data === "Login Sucessfull") {
+            navigate("/");
+            {
+              <UserProvider>
+                {email}
+              </UserProvider>
+            }
           } else {
-            
             setError("Incorrect email or password");
           }
           setSubmitting(false);
         })
         .catch((error) => {
-         
           console.error(error);
-          
           setError("An error occurred during login");
           setSubmitting(false);
         });
     }
-  }, [submitting]);
+  }, [submitting, email, password, navigate]);
 
   return (
     <div className="Login">
@@ -75,9 +77,9 @@ const Login = () => {
             </span>
           </div>
           <p className="SignUp">
-            Couldn't have an account?
+            Couldn't have an account? 
             <span className="SignUp_Link">
-              <Link to="/User_SignUp">Sign Up</Link>
+              <Link to="/User_SignUp"> Sign Up</Link>
             </span>
           </p>
           <button type="submit" className="Submit">
@@ -87,6 +89,7 @@ const Login = () => {
         </form>
       </div>
     </div>
+  
   );
 };
 
