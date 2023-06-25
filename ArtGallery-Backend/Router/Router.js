@@ -141,7 +141,7 @@ router.post("/User_login", async function (req, res) {
       const Check_Password = await bcrypt.compare(password, User.Password);
       const Name = User.firstName
       if (Check_Password) {
-        res.send("Login Successfull",Name);
+        res.send({msg:"Login Successfull",Name});
       } else {
         res.send("Incorrect Password");
       }

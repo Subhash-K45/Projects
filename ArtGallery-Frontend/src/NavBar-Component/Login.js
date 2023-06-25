@@ -23,6 +23,7 @@ const Login = () => {
 
   useEffect(() => {
     if (submitting) {
+      
       axios
         .post("https://artgallery-api.onrender.com/User_login", {
           email: email,
@@ -30,7 +31,7 @@ const Login = () => {
         })
         .then((response) => {
           console.log(response);
-          if (response.data === "Login Sucessfull") {
+          if (response.data === "Login Successfull") {
             navigate("/");
             {
               <UserProvider>
