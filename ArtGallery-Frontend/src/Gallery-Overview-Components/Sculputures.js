@@ -19,7 +19,7 @@ const Sculptures = () => {
       <div className="Sculptures-item-Box">
         
         {loading
-          ? "Loading ..."
+          ? <p className="loading">Loading ...</p>
           : state.map(
               ({
                 id,

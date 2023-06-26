@@ -19,7 +19,7 @@ const Mixed_Art = () => {
       <div className="Mixed_Art-item-Box">
         
         {loading
-          ? "Loading ..."
+          ?<p className="loading">Loading ...</p>
           : state.map(
               ({ id, img, price, artist, description, name, category }) => {
                 const link = "/purchase/:" + id + "/:Mixed_Image";

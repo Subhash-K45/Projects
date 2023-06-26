@@ -17,7 +17,7 @@ const Event = () => {
       </div>
       <div className="Event-Box-Content">
         {loading
-          ? "Loading.. "
+          ? <p className="loading">Loading..</p>
           : state.map(
               ({
                 Event_Title,

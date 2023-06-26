@@ -17,7 +17,7 @@ const Contemporary = () => {
       <h2>Contemporary Paintings</h2>
       <div className="Contemporary-item-Box">
         {loading
-          ? "Loading ..."
+          ? <p className="loading">Loading ...</p>
           : state.map(
               ({ id, img, price, artist, description, name, category }) => {
                 const link = `/purchase/:${id}/:Contemporary_Paintings`;
