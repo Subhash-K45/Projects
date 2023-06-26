@@ -1,10 +1,11 @@
-import { useState} from 'react'
+
 import Event from '../Event'
 import Nav from '../Nav'
 import OverView from '../OverviewComponent'
 import Visit from '../VisitUs'
 import Contact_Home from '../Contact-Home'
 const Home=()=>{
+    
     return(
         <div className="Main-Page">
             <div className="Home">

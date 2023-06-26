@@ -28,7 +28,10 @@ body{
     justify-content: space-between;
     margin-right: 2rem;
 }
-.navbar a{
+.user-name{
+    color:rgb(255, 47, 47);
+}
+.navbar a, .navbar li{
     text-decoration: none;
     color:#FB94DC;
     font-weight: 500;
@@ -806,4 +809,9 @@ ul{
 .Not-Found{
     color:var(--pink);
     font-weight: 700;
+}
+.password-error,.email-error{
+    align-self: flex-start;
+    color: red;
+    margin-top: -2.5rem;
 }

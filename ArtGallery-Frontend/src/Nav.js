@@ -1,5 +1,10 @@
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "./Context";
+
 const Nav = () => {
+  const { userName } = useContext(UserContext);
+
   return (
     <div className="navbar">
       <ul>
@@ -13,7 +18,13 @@ const Nav = () => {
           <NavLink to="/Contact">Contact</NavLink>
         </li>
         <li>
-          <NavLink to="/Login" className="Home-Login">Login</NavLink>
+          {userName ? (
+            <span className="Home-Login user-name">{userName}</span>
+          ) : (
+            <NavLink to="/Login" className="Home-Login">
+              Login
+            </NavLink>
+          )}
         </li>
       </ul>
     </div>

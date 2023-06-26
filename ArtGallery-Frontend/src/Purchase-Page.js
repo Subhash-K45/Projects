@@ -1,8 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { UserContext } from "./Context";
 import axios from "axios";
 
 const Purchase = () => {
+  const { userName } = useContext(UserContext);
   const [loading, setLoading] = useState(true);
   const [state, setState] = useState([]);
   let { id, query } = useParams();

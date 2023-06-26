@@ -1,12 +1,19 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect,useContext } from 'react';
+import{useNavigate} from "react-router-dom"
 import axios from 'axios';
+import { UserContext } from "./Context";
+
 const SignUpPage = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [Password, setPassword] = useState('');
   const [Phone, setPhone] = useState('');
-  const [submitForm,setSubmitForm]=useState(false)
+  const [submitForm,setSubmitForm]=useState(false);
+  const [email_error,set_Email_Error]=useState(false);
+  const navigate = useNavigate();
+  const { updateUserName } = useContext(UserContext);
+
   useEffect(() => {
     if (submitForm) {
       axios
@@ -17,14 +24,14 @@ const SignUpPage = () => {
           Password: Password,
           Phone: Phone,
         })
-        .then((response) => console.log(response))
+        .then((response) => 
+        {
+          if(response.data==="userFound"){
+            set_Email_Error(true)
+          }
+        })
         .catch((error) => console.error(error))
         .finally(() => {
-          setFirstName("");
-          setLastName("");
-          setEmail("");
-          setPassword("");
-          setPhone("");
           setSubmitForm(false);
         });
     }
@@ -33,7 +40,7 @@ const SignUpPage = () => {
   function handleSubmit(e) {
     e.preventDefault();
     setSubmitForm(true);
-    console.log("Form submitted:", { firstName, lastName, email, Password, Phone });
+   
   }
   
 

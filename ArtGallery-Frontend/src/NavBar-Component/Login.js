@@ -1,16 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import axios from "axios";
-import { UserProvider } from "../Context";
+import { UserContext } from "../Context";
 
 const Login = () => {
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState("");
+  const [Emailerror, set_Email_Error] = useState(false);
+  const [Passworderror, set_Password_Error] = useState(false);
   const navigate = useNavigate();
+  const { updateUserName } = useContext(UserContext);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -23,7 +25,6 @@ const Login = () => {
 
   useEffect(() => {
     if (submitting) {
-      
       axios
         .post("https://artgallery-api.onrender.com/User_login", {
           email: email,
@@ -31,25 +32,28 @@ const Login = () => {
         })
         .then((response) => {
           console.log(response);
-          if (response.data === "Login Successfull") {
+          if (response.data.msg === "Login Successfull") {
             navigate("/");
-            {
-              <UserProvider>
-                {email}
-              </UserProvider>
-            }
-          } else {
-            setError("Incorrect email or password");
+            set_Email_Error(false)
+            set_Password_Error(false)
+            updateUserName(response.data.Name);
+          } else if(response.data==="Incorrect Password") {
+            set_Email_Error(false);
+            set_Password_Error(true);
+          }
+          else{
+            set_Password_Error(false);
+            set_Email_Error(true);
           }
           setSubmitting(false);
         })
         .catch((error) => {
           console.error(error);
-          setError("An error occurred during login");
+          set_Email_Error("An error occurred during login");
           setSubmitting(false);
         });
     }
-  }, [submitting, email, password, navigate]);
+  }, [submitting]);
 
   return (
     <div className="Login">
@@ -64,6 +68,7 @@ const Login = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
+          {Emailerror && <p className="email-error">User Not Found</p>}
           <div className="password-inline">
             <input
               type={open ? "text" : "password"}
@@ -77,6 +82,7 @@ const Login = () => {
               {open ? <AiFillEyeInvisible /> : <AiFillEye />}
             </span>
           </div>
+          {Passworderror && <p className="password-error">Incorrect password</p>}
           <p className="SignUp">
             Couldn't have an account? 
             <span className="SignUp_Link">
@@ -86,11 +92,10 @@ const Login = () => {
           <button type="submit" className="Submit">
             Submit
           </button>
-          {error && <p className="error-message">{error}</p>}
+          
         </form>
       </div>
     </div>
-  
   );
 };
 
