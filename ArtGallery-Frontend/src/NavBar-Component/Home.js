@@ -1,4 +1,3 @@
-
 import Event from '../Event'
 import Nav from '../Nav'
 import OverView from '../OverviewComponent'
@@ -41,7 +40,7 @@ const Home=()=>{
                     <Visit/>
                 </div>
             </div>
-            <footer>
+            <footer id="footer">
                 <Contact_Home/>
             </footer>
         </div>

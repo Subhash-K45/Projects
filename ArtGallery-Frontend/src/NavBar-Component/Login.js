@@ -31,25 +31,23 @@ const Login = () => {
           password: password,
         })
         .then((response) => {
-          console.log(response);
-          if (response.data.msg === "Login Successfull") {
+         if (response.data.msg === "Login Successfull") {
+            localStorage.setItem("userName", response.data.Name); 
             navigate("/");
-            set_Email_Error(false)
-            set_Password_Error(false)
+            set_Email_Error(false);
+            set_Password_Error(false);
             updateUserName(response.data.Name);
-          } else if(response.data==="Incorrect Password") {
+          } else if (response.data === "Incorrect Password") {
             set_Email_Error(false);
             set_Password_Error(true);
-          }
-          else{
+          } else {
             set_Password_Error(false);
             set_Email_Error(true);
           }
           setSubmitting(false);
         })
         .catch((error) => {
-          console.error(error);
-          set_Email_Error("An error occurred during login");
+         set_Email_Error("An error occurred during login");
           setSubmitting(false);
         });
     }
@@ -84,7 +82,7 @@ const Login = () => {
           </div>
           {Passworderror && <p className="password-error">Incorrect password</p>}
           <p className="SignUp">
-            Couldn't have an account? 
+            Couldn't have an account?
             <span className="SignUp_Link">
               <Link to="/User_SignUp"> Sign Up</Link>
             </span>
@@ -92,7 +90,6 @@ const Login = () => {
           <button type="submit" className="Submit">
             Submit
           </button>
-          
         </form>
       </div>
     </div>
