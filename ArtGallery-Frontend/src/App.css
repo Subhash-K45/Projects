@@ -978,7 +978,7 @@ ul{
 }
 
 .model p {
-  position:absolute;
+  position:fixed;
   top:10px;
   text-indent:1rem;
   letter-spacing:1.2px;
